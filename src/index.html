@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
-    <title>MyFridge</title>
+    <link rel="shortcut icon" href="logo.svg">
+    <title>BSFG</title>
 </head>
-<body class="bg-mist-50 dark:bg-mist-800 text-mist-800 dark:text-mist-50 grid justify-center">
+<body class="bg-mist-50 dark:bg-mist-800 text-mist-800 dark:text-mist-50 grid justify-center m-2">
+    
+    <div class="absolute flex flex-row gap-4 items-center">
+        <img class="h-12 w-12" src="logo.svg" alt="Logo">
+        <span class="text-xl font-bold">BSFG - Barcode Scanner for Groceries</span>
+    </div>
+    
     <div class="p-8 bg-mist-100 dark:bg-mist-700 rounded-2xl rotate-1 mt-48 flex flex-col text-center">
-        <h1 class="font-black text-4xl">Willkommen zu BSFG</h1>
+        <h1>Willkommen zu BSFG</h1>
         <hr class="bg-mist-700 dark:bg-mist-200 h-1 rounded-full my-2">
         <p class="text-mist-800 dark:text-mist-100">Diese Seite ist aktuell noch in der Entwicklung und dient als Platzhalter.<br>Schau in den kommenden Wochen nach!</p>
+    </div>
+
+    <div class="p-8 bg-mist-100 dark:bg-mist-700 rounded-2xl -rotate-1 mt-48 flex flex-col text-center">
+        <h2>Was ist BSFG?</h2>
+
+        <hr class="bg-mist-700 dark:bg-mist-200 h-1 rounded-full my-2">
+
+        <div class="lg:grid lg:grid-cols-2 gap-8
+         flex flex-col">
+            <div class="p-8 bg-mist-200 dark:bg-mist-600 rounded-2xl flex flex-col text-center">
+                <h3>Übersicht</h3>
+                <p>BSFG hilft, eine Übersicht über seine Lebensmittel im Kühlschrank zu erstellen.</p>
+            </div>
+
+            <div class="p-8 bg-mist-200 dark:bg-mist-600 rounded-2xl flex flex-col text-center">
+                <h3>Kochhilfe</h3>
+                <p>BASF besitzt einen integrierten KI-Assistenten, welcher Rezepte mit den verfügbaren Zutaten erstellt.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
