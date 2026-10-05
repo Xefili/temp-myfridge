@@ -25,3 +25,7 @@ h5 {
     @apply font-black text-lg;
     font-variation-settings: "ROND" 100;
 }
+
+h4:hover + div {
+    @apply flex;
+}
