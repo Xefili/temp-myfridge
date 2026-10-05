@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght,ROND@6..144,1..1000,1..100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>BSFG</title>
+    <title>BSFG - Preise</title>
 </head>
-<body class="bg-mist-50 dark:bg-mist-800 text-mist-800 dark:text-mist-50 grid justify-center m-2">
+<body class="text-mist-800 dark:text-mist-50 grid justify-center m-2">
     <nav class="grid grid-cols-2 border-b-2 border-mist-100 bg-mist-50 dark:bg-mist-800 dark:border-mist-700 p-4">
         <div class="flex flex-row gap-4 items-center">
             <img class="h-12 w-12" src="logo.svg" alt="Logo">
@@ -23,9 +23,9 @@
                 <h4 id="ubersicht" class="cursor-pointer">Übersicht</h4>
                 <div class="hidden hover:flex z-50 absolute backdrop-blur-2xl bg-mist-100/50 dark:bg-mist-700/50 p-4 rounded-2xl">
                     <ul class="flex flex-col gap-4">
-                        <a href="#welcome">Übersicht</a>
-                        <a href="#whybsfg">Warum BSFG?</a>
-                        <a href="ai">KI-Support</a>
+                        <a href="index.html#welcome">Übersicht</a>
+                        <a href="index.html#whybsfg">Warum BSFG?</a>
+                        <a href="index.html#ai">KI-Support</a>
                     </ul>
                 </div>
             </div>
@@ -74,29 +74,24 @@
         </div>
     </div>
     
-    <div class="p-8 bg-mist-100 dark:bg-mist-700 rounded-2xl rotate-1 mt-48 flex flex-col text-center">
-        <h1 id="welcome">Willkommen zu BSFG</h1>
-        <hr class="bg-mist-700 dark:bg-mist-200 h-1 rounded-full my-2">
-        <p class="text-mist-800 dark:text-mist-100">Diese Seite ist aktuell noch in der Entwicklung und dient als Platzhalter.<br>Schau in den kommenden Wochen nach!</p>
-    </div>
-
-    <div class="p-8 bg-mist-100 dark:bg-mist-700 rounded-2xl -rotate-1 mt-48 flex flex-col text-center">
-        <h2 id="whybsfg">Was ist BSFG?</h2>
-
-        <hr class="bg-mist-700 dark:bg-mist-200 h-1 rounded-full my-2">
-
-        <div class="lg:grid lg:grid-cols-2 gap-8
-         flex flex-col">
-            <div class="p-8 bg-mist-200 dark:bg-mist-600 rounded-2xl flex flex-col text-center">
-                <h3>Übersicht</h3>
-                <p>BSFG hilft, eine Übersicht über seine Lebensmittel im Kühlschrank zu erstellen.</p>
+    <div class="p-8 bg-mist-100 dark:bg-mist-700 rounded-2xl mt-12 flex flex-col text-center">
+        <h1 id="welcome">Preise</h1>
+        <hr class="bg-mist-700 dark:bg-mist-200 h-1 rounded-full my-4">
+        <div class="flex lg:flex-row flex-col gap-4 justify-evenly">
+            <div class="bg-mist-200 dark:bg-mist-600 rounded-xl p-4">
+                <h2>Basis</h2>
+                <p>Einsortieren, Lebensmittel sparen!</p>
+                <span class="font-bold text-6xl text-center block mt-4" id="basicprice">5€</span>
+                <span>monatlich abgerechnet</span>
             </div>
-
-            <div class="p-8 bg-mist-200 dark:bg-mist-600 rounded-2xl flex flex-col text-center">
-                <h3 id="ai">Kochhilfe</h3>
-                <p>BASF besitzt einen integrierten KI-Assistenten, welcher Rezepte mit den verfügbaren Zutaten erstellt.</p>
+            <div class="bg-mist-200 dark:bg-mist-600 rounded-xl p-4">
+                <h2>Premium</h2>
+                <p>Basis, mit KI-Kochrezepten!</p>
+                <span class="font-bold text-6xl text-center block mt-4" id="premiumprice">25€</span>
+                <span>monatlich abgerechnet</span>
             </div>
         </div>
+        <span class="text-center block mt-4">Bei einem Jahresabo sparen Sie bis zu 15%!</span>
     </div>
 </body>
 </html>
@@ -106,4 +101,12 @@ document.getElementById("toggleBTN").addEventListener("click", () => {
     document.getElementById("mob-navbar").classList.toggle("hidden");
     document.getElementById("mob-navbar").classList.toggle("flex");
 })
+
+const params = new URLSearchParams(window.location.search)
+console.log(params);
+
+if(params.has("group")) {
+    document.getElementById("basicprice").innerHTML = "7€ p.P."
+    document.getElementById("premiumprice").innerHTML = "45€ p.P."
+}
 </script>
