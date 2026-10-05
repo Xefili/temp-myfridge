@@ -2,7 +2,20 @@
 
 
 @theme {
-    --font-sans: "Google Sans Flex"
+    --font-sans: "Google Sans Flex";
+
+--color-mist-50:  #f4f8f6;
+  --color-mist-100: #e3ece8;
+  --color-mist-200: #cbdbd4;
+  --color-mist-300: #a7c3b8;
+  --color-mist-400: #7fa597;
+
+  --color-mist-500: oklch(0.42 0.035 160);
+  --color-mist-600: oklch(0.32 0.033 160);
+  --color-mist-700: oklch(0.28 0.030 160);
+  --color-mist-800: oklch(0.20 0.025 160);
+  --color-mist-900: oklch(0.20 0.020 160);
+  --color-mist-950: oklch(0.16 0.015 160);
 }
 
 h1 {
