@@ -3,9 +3,7 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-      "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: "Google Sans Flex";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-mist-50: oklch(98.7% 0.002 197.1);
@@ -199,35 +197,20 @@
   .grid {
     display: grid;
   }
-  .table {
-    display: table;
-  }
   .h-1 {
     height: var(--spacing);
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
-  }
   .w-12 {
     width: calc(var(--spacing) * 12);
-  }
-  .w-24 {
-    width: calc(var(--spacing) * 24);
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .-rotate-1 {
     rotate: calc(1deg * -1);
   }
   .rotate-1 {
     rotate: 1deg;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -237,9 +220,6 @@
   }
   .items-center {
     align-items: center;
-  }
-  .items-start {
-    align-items: flex-start;
   }
   .justify-center {
     justify-content: center;
@@ -255,10 +235,6 @@
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .bg-mist-50 {
     background-color: var(--color-mist-50);
@@ -278,9 +254,6 @@
   .text-center {
     text-align: center;
   }
-  .align-middle {
-    vertical-align: middle;
-  }
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
@@ -291,13 +264,6 @@
   }
   .text-mist-800 {
     color: var(--color-mist-800);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   @media (width >= 64rem) {
     .lg\:grid {
@@ -333,51 +299,44 @@ h1 {
   line-height: var(--tw-leading, var(--text-4xl--line-height));
   --tw-font-weight: var(--font-weight-black);
   font-weight: var(--font-weight-black);
+  font-variation-settings: "ROND" 100;
 }
 h2 {
   font-size: var(--text-3xl);
   line-height: var(--tw-leading, var(--text-3xl--line-height));
   --tw-font-weight: var(--font-weight-black);
   font-weight: var(--font-weight-black);
+  font-variation-settings: "ROND" 100;
 }
 h3 {
   font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-font-weight: var(--font-weight-black);
   font-weight: var(--font-weight-black);
+  font-variation-settings: "ROND" 100;
 }
 h4 {
   font-size: var(--text-xl);
   line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-font-weight: var(--font-weight-black);
   font-weight: var(--font-weight-black);
+  font-variation-settings: "ROND" 100;
 }
 h5 {
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
   --tw-font-weight: var(--font-weight-black);
   font-weight: var(--font-weight-black);
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+  font-variation-settings: "ROND" 100;
 }
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }

@@ -1,17 +1,27 @@
 @import "tailwindcss";
 
+
+@theme {
+    --font-sans: "Google Sans Flex"
+}
+
 h1 {
     @apply font-black text-4xl;
+    font-variation-settings: "ROND" 100;
 }
 h2 {
     @apply font-black text-3xl;
+    font-variation-settings: "ROND" 100;
 }
 h3 {
     @apply font-black text-2xl;
+    font-variation-settings: "ROND" 100;
 }
 h4 {
     @apply font-black text-xl;
+    font-variation-settings: "ROND" 100;
 }
 h5 {
     @apply font-black text-lg;
+    font-variation-settings: "ROND" 100;
 }
