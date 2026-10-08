@@ -82,7 +82,7 @@
             <div class="bg-mist-200 dark:bg-mist-600 rounded-xl p-4">
                 <h2>Basis</h2>
                 <p>Einsortieren, Lebensmittel sparen!</p>
-                <span class="font-bold text-6xl text-center block mt-4" id="basicprice">5€</span>
+                <span class="font-bold text-6xl text-center block mt-4" id="basicprice">Gratis!</span>
                 <span>monatlich abgerechnet</span>
             </div>
             <div class="bg-mist-200 dark:bg-mist-600 rounded-xl p-4">
@@ -115,7 +115,7 @@ const params = new URLSearchParams(window.location.search)
 console.log(params);
 
 if(params.has("group")) {
-    document.getElementById("basicprice").innerHTML = "7€ p.P."
+    document.getElementById("basicprice").innerHTML = "2,50€ p.P."
     document.getElementById("premiumprice").innerHTML = "45€ p.P."
 }
 
