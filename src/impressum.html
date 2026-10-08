@@ -14,7 +14,7 @@
 </head>
 <body class="bg-mist-50 dark:bg-mist-800 text-mist-800 dark:text-mist-50 grid justify-center">
     <nav class="grid grid-cols-2 border-b-2 border-mist-100 bg-mist-50 dark:bg-mist-800 dark:border-mist-700 p-4">
-        <div class="flex flex-row gap-4 items-center">
+        <div class="flex flex-row gap-4 items-center" id="backbtn">
             <img class="h-12 w-12" src="logo.svg" alt="Logo">
             <span class="text-xl font-bold">BSFG - Barcode Scanner for Groceries</span>
         </div>
@@ -93,5 +93,9 @@
 document.getElementById("toggleBTN").addEventListener("click", () => {
     document.getElementById("mob-navbar").classList.toggle("hidden");
     document.getElementById("mob-navbar").classList.toggle("flex");
-})
+});
+
+document.getElementById("backbtn").addEventListener("click", () => {
+    window.location.href = "https://myfridge.xefili.app/";
+});
 </script>
